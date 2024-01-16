@@ -232,6 +232,15 @@ app.post('/reviews', async (req, res) => {
     res.send(result);
     // res.send(id)
 });
+  // delete the value
+    app.delete('/company/:id', async (req, res) => {
+    const id = req.body.id;
+
+    const query = { _id: ObjectId(id) };
+    const result = await CompanyDb.deleteOne(query);
+    res.send(result);
+    // res.send(id)
+});
     app.post('/company', async (req, res) => {
     const orders = req.body;
     
@@ -265,7 +274,7 @@ app.post('/reviews', async (req, res) => {
 
 run().catch(console.dir)
 app.get('/',(req,res)=>{
-    res.send('This is form why doest notcommpter')
+    res.send('This is form why doest bangladesh computer')
 })
 app
 app.listen(port,()=>{
