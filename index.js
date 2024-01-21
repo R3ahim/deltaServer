@@ -242,6 +242,22 @@ app.post('/reviews', async (req, res) => {
     res.send(result);
     // res.send(id)
 });
+           app.delete('/company2/:id', async (req, res) => {
+    const id = req.body.id;
+
+    const query = { _id: ObjectId(id) };
+    const result = await CompanyDb2.deleteOne(query);
+    res.send(result);
+    // res.send(id)
+});
+           app.delete('/company3/:id', async (req, res) => {
+    const id = req.body.id;
+
+    const query = { _id: ObjectId(id) };
+    const result = await CompanyDb3.deleteOne(query);
+    res.send(result);
+    // res.send(id)
+});
        app.post('/company', async (req, res) => {
     const orders = req.body;
     
@@ -275,22 +291,7 @@ app.post('/reviews', async (req, res) => {
     const orderses= await CompanyDb3.find().toArray();
     res.send(orderses)
   }) 
-          app.delete('/company2/:id', async (req, res) => {
-    const id = req.body.id;
 
-    const query = { _id: ObjectId(id) };
-    const result = await CompanyDb2.deleteOne(query);
-    res.send(result);
-    // res.send(id)
-});
-  app.delete('/company3/:id', async (req, res) => {
-    const id = req.body.id;
-
-    const query = { _id: ObjectId(id) };
-    const result = await CompanyDb3.deleteOne(query);
-    res.send(result);
-    // res.send(id)
-});
      app.get('/love/:id', async (req, res) => {
     const id = req.body.id;
         const query = { id: id };
