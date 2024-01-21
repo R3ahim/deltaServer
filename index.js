@@ -21,7 +21,8 @@ async function run(){
     const FacebookAccount= client.db('toolsService').collection('account')
     const SheetDb = client.db('toolsService').collection('sellsReport')
     const CompanyDb = client.db('toolsService').collection('companyExpance')
-    
+    const CompanyDb2 = client.db('toolsService').collection('companyExpance2')
+    const CompanyDb3 = client.db('toolsService').collection('companyExpance3')    
 
     app.get('/service',async(req,res)=>{
         const service = await serviceCollection.find().toArray();
@@ -241,15 +242,37 @@ app.post('/reviews', async (req, res) => {
     res.send(result);
     // res.send(id)
 });
-    app.post('/company', async (req, res) => {
+       app.post('/company', async (req, res) => {
     const orders = req.body;
     
     const results = await CompanyDb.insertOne(orders);
      res.send(results)
      console.log(orders)
   })
+    app.post('/company2', async (req, res) => {
+    const orders = req.body;
+    
+    const results = await CompanyDb2.insertOne(orders);
+     res.send(results)
+     console.log(orders)
+  })
+    app.post('/company3', async (req, res) => {
+    const orders = req.body;
+    
+    const results = await CompanyDb3.insertOne(orders);
+     res.send(results)
+     console.log(orders)
+  })
    app.get('/company' ,async(req,res)=>{
     const orderses= await CompanyDb.find().toArray();
+    res.send(orderses)
+  }) 
+   app.get('/company2' ,async(req,res)=>{
+    const orderses= await CompanyDb2.find().toArray();
+    res.send(orderses)
+  }) 
+   app.get('/company3' ,async(req,res)=>{
+    const orderses= await CompanyDb3.find().toArray();
     res.send(orderses)
   }) 
      app.get('/love/:id', async (req, res) => {
