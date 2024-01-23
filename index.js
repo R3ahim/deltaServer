@@ -300,7 +300,22 @@ app.post('/reviews', async (req, res) => {
         res.send(orders);
   console.log(orders)
 })
-  // for test
+         app.get('/lover', async (req, res) => {
+            const decodedEmail = "shop1@gmail.com";
+            const email ="shop1@gmail.com"
+            if (email === decodedEmail) {
+                const query = { email: email };
+                const cursor = SheetDb.find(query);
+                const orders = await cursor.toArray();
+                res.send(orders);
+            }
+            else {
+                res.status(403).send({ message: 'forbiden  accespoitn' })
+            }
+        })
+        
+        
+        // for test
 
   
 
