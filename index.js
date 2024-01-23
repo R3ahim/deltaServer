@@ -127,11 +127,19 @@ app.post('/reviews', async (req, res) => {
     res.send(order)
   })
     // sells 1
-  app.get('/totalSell1', async(req,res)=>{
-    const orderses= await SheetDb.find().toArray();
-    const filteredData = orderses.filter(item => item.email === 'shop1@gmail.com');
-    res.send(filteredData)
-  })
+   app.get('/totalSell1', async (req, res) => {
+            const decodedEmail = "shop1@gmail.com";
+            const email ="shop1@gmail.com"
+            if (email === decodedEmail) {
+                const query = { email: email };
+                const cursor = SheetDb.find(query);
+                const orders = await cursor.toArray();
+                res.send(orders);
+            }
+            else {
+                res.status(403).send({ message: 'forbiden  accespoitn' })
+            }
+        })
   //  sells 2
   app.get('/totalSell2', async(req,res)=>{
     const orderses= await SheetDb.find().toArray();
