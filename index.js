@@ -23,7 +23,9 @@ async function run(){
     const CompanyDb = client.db('toolsService').collection('companyExpance')
     const CompanyDb2 = client.db('toolsService').collection('companyExpance2')
     const CompanyDb3 = client.db('toolsService').collection('companyExpance3')    
+  const EmployeDb = client.db('toolsService').collection('employee')
 
+    const Attend1 = client.db('toolsService').collection('attend1')
     app.get('/service',async(req,res)=>{
         const service = await serviceCollection.find().toArray();
         res.send(service)
@@ -426,7 +428,37 @@ app.post('/reviews', async (req, res) => {
                 res.status(403).send({ message: 'forbiden  accespoitn' })
             }
         })
-        
+
+          app.post('/attend1', async (req, res) => {
+    const orders = req.body;
+    console.log(orders)
+    const results = await Attend1.insertOne(orders);
+     res.send(results)
+  })
+// geting from attend
+app.get('/attend1' ,async(req,res)=>{
+  const orderses= await Attend1.find().toArray();
+  res.send(orderses)
+}) 
+app.delete('/attend1/:id', async (req, res) => {
+  const id = req.body.id;
+
+  const query = { _id: ObjectId(id) };
+  const result = await Attend1.deleteOne(query);
+  res.send(result);
+  // res.send(id)
+
+});
+  
+app.post('/addMember',async(req,res)=>{
+  const orders = req.body;
+  const results = await EmployeDb.insertOne(orders)
+  res.send(results)
+})
+app.get('/addMember',async(req,res)=>{
+  const employee = await EmployeDb.find().toArray();
+  res.send(employee);
+})
         
         // for test
 
