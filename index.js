@@ -459,7 +459,15 @@ app.get('/addMember',async(req,res)=>{
   const employee = await EmployeDb.find().toArray();
   res.send(employee);
 })
-        
+// delete the value
+    app.delete('/addMember/:id', async (req, res) => {
+    const id = req.body.id;
+
+    const query = { _id: ObjectId(id) };
+    const result = await EmployeDb.deleteOne(query);
+    res.send(result);
+    // res.send(id)
+});        
         // for test
 
   
