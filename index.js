@@ -466,6 +466,11 @@ app.post('/orders',async(req,res)=>{
     res.send(result);
     // res.send(id)
 }); 
+        app.get('/orders',async(req,res)=>{
+  const results = await OrdersDb.find().toArray();
+  res.send(results)
+})
+
 
   
     }
