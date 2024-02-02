@@ -454,7 +454,7 @@ app.post('/orders',async(req,res)=>{
              app.get('/orders/:id', async (req, res) => {
     const id = req.body.id;
         const query = { id: id };
-        const cursor = ordersDv.find(query);
+        const cursor = ordersDb.find(query);
         const orders = await cursor.toArray();
         res.send(orders);
 })
