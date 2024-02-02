@@ -14,16 +14,14 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run(){
     try{
      await client.connect();
-    const serviceCollection= client.db('toolsService').collection('service')
     
-    const orderCollection= client.db('toolsService').collection('orderService')
-    const reviewsCollection= client.db('toolsService').collection('reviews')
     const FacebookAccount= client.db('toolsService').collection('account')
     const SheetDb = client.db('toolsService').collection('sellsReport')
     const CompanyDb = client.db('toolsService').collection('companyExpance')
     const CompanyDb2 = client.db('toolsService').collection('companyExpance2')
     const CompanyDb3 = client.db('toolsService').collection('companyExpance3')    
   const EmployeDb = client.db('toolsService').collection('employee')
+  const OrdersDb = client.db('orders').collection('employee')
 
     const Attend1 = client.db('toolsService').collection('attend1')
     app.get('/service',async(req,res)=>{
@@ -41,31 +39,10 @@ async function run(){
 
 
     //  orderCollection
-   app.post('/orders', async (req, res) => {
-    const orders = req.body;
-    
-    const results = await orderCollection.insertOne(orders);
-     res.send(results)
-  })
-  app.get('/orders' ,async(req,res)=>{
-    const orders = await orderCollection.find().toArray();
-    res.send(orders)
-  })
-  app.get('/orders/:id',async(req,res)=>{
-    const id = req.params.id;
-    const query = { _id: ObjectId(id) };
-    console.log(query);
-    const order = await orderCollection.findOne(query);
-    res.send(order)
-  })
-  app.delete('/orders/:id', async (req, res) => {
-    const id = req.body.id;
+  
 
-    const query = { _id: ObjectId(id) };
-    const result = await orderCollection.deleteOne(query);
-    res.send(result);
-    // res.send(id)
-});
+
+
 app.put('/orders/:id', async (req, res) => {
   const id = req.params.id;
   const updateData = req.body;
@@ -469,8 +446,26 @@ app.get('/addMember',async(req,res)=>{
     // res.send(id)
 });        
         // for test
+app.post('/orders',async(req,res)=>{
+  const orders = req.body;
+  const results = await ordersDb.insertOne(orders)
+  res.send(results)
+})
+             app.get('/orders/:id', async (req, res) => {
+    const id = req.body.id;
+        const query = { id: id };
+        const cursor = ordersDv.find(query);
+        const orders = await cursor.toArray();
+        res.send(orders);
+})
+    app.delete('/orders/:id', async (req, res) => {
+    const id = req.body.id;
 
-  
+    const query = { _id: ObjectId(id) };
+    const result = await ordersDb.deleteOne(query);
+    res.send(result);
+    // res.send(id)
+}); 
 
   
     }
