@@ -448,13 +448,13 @@ app.get('/addMember',async(req,res)=>{
         // for test
 app.post('/orders',async(req,res)=>{
   const orders = req.body;
-  const results = await ordersDb.insertOne(orders)
+  const results = await OrdersDb.insertOne(orders)
   res.send(results)
 })
              app.get('/orders/:id', async (req, res) => {
     const id = req.body.id;
         const query = { id: id };
-        const cursor = ordersDb.find(query);
+        const cursor = OrdersDb.find(query);
         const orders = await cursor.toArray();
         res.send(orders);
 })
@@ -462,7 +462,7 @@ app.post('/orders',async(req,res)=>{
     const id = req.body.id;
 
     const query = { _id: ObjectId(id) };
-    const result = await ordersDb.deleteOne(query);
+    const result = await OrdersDb.deleteOne(query);
     res.send(result);
     // res.send(id)
 }); 
