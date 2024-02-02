@@ -21,7 +21,7 @@ async function run(){
     const CompanyDb2 = client.db('toolsService').collection('companyExpance2')
     const CompanyDb3 = client.db('toolsService').collection('companyExpance3')    
   const EmployeDb = client.db('toolsService').collection('employee')
-  const OrdersDb = client.db('orders').collection('employee')
+  const OrdersDb = client.db('orders').collection('orderses')
 
     const Attend1 = client.db('toolsService').collection('attend1')
     app.get('/service',async(req,res)=>{
