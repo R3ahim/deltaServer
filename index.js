@@ -481,7 +481,7 @@ app.post('/orders',async(req,res)=>{
     const query = { _id: ObjectId(id) };
     const result = await OrdersDb.deleteOne(query);
     res.send(result);
-  console.log('done',result)
+  console.log('done',result,id)
 });    
         app.get('/orders',async(req,res)=>{
   const results = await OrdersDb.find().toArray();
