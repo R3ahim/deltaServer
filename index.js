@@ -120,201 +120,201 @@ app.post('/reviews', async (req, res) => {
             }
         })
   //  sells 2
-  app.get('/totalSell2', async (req, res) => {
-            const decodedEmail = "shop2@gmail.com";
-            const email ="shop2@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell2', async (req, res) => {
+  //           const decodedEmail = "shop2@gmail.com";
+  //           const email ="shop2@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 3
-  app.get('/totalSell3', async (req, res) => {
-            const decodedEmail = "shop3@gmail.com";
-            const email ="shop3@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell3', async (req, res) => {
+  //           const decodedEmail = "shop3@gmail.com";
+  //           const email ="shop3@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 4
-  app.get('/totalSell4', async (req, res) => {
-            const decodedEmail = "shop4@gmail.com";
-            const email ="shop4@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell4', async (req, res) => {
+  //           const decodedEmail = "shop4@gmail.com";
+  //           const email ="shop4@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 5
-  app.get('/totalSell5', async (req, res) => {
-            const decodedEmail = "shop5@gmail.com";
-            const email ="shop5@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
-  // sells 6
-  app.get('/totalSell6', async (req, res) => {
-            const decodedEmail = "shop6@gmail.com";
-            const email ="shop6@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell5', async (req, res) => {
+  //           const decodedEmail = "shop5@gmail.com";
+  //           const email ="shop5@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
+
+  // app.get('/totalSell6', async (req, res) => {
+  //           const decodedEmail = "shop6@gmail.com";
+  //           const email ="shop6@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 7
-  app.get('/totalSell7', async (req, res) => {
-            const decodedEmail = "shop7@gmail.com";
-            const email ="shop7@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell7', async (req, res) => {
+  //           const decodedEmail = "shop7@gmail.com";
+  //           const email ="shop7@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 8
-  app.get('/totalSell8', async (req, res) => {
-            const decodedEmail = "shop8@gmail.com";
-            const email ="shop8@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell8', async (req, res) => {
+  //           const decodedEmail = "shop8@gmail.com";
+  //           const email ="shop8@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sels 9
-  app.get('/totalSell9', async (req, res) => {
-            const decodedEmail = "shop9@gmail.com";
-            const email ="shop9@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell9', async (req, res) => {
+  //           const decodedEmail = "shop9@gmail.com";
+  //           const email ="shop9@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 10
-  app.get('/totalSell10', async (req, res) => {
-            const decodedEmail = "shop10@gmail.com";
-            const email ="shop10@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell10', async (req, res) => {
+  //           const decodedEmail = "shop10@gmail.com";
+  //           const email ="shop10@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 11
-  app.get('/totalSell11', async (req, res) => {
-            const decodedEmail = "shop11@gmail.com";
-            const email ="shop11@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell11', async (req, res) => {
+  //           const decodedEmail = "shop11@gmail.com";
+  //           const email ="shop11@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 112
-  app.get('/totalSell12', async (req, res) => {
-            const decodedEmail = "shop12@gmail.com";
-            const email ="shop12@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell12', async (req, res) => {
+  //           const decodedEmail = "shop12@gmail.com";
+  //           const email ="shop12@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 13
-  app.get('/totalSell13', async (req, res) => {
-            const decodedEmail = "shop13@gmail.com";
-            const email ="shop13@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell13', async (req, res) => {
+  //           const decodedEmail = "shop13@gmail.com";
+  //           const email ="shop13@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 14
-  app.get('/totalSell14', async (req, res) => {
-            const decodedEmail = "shop14@gmail.com";
-            const email ="shop14@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell14', async (req, res) => {
+  //           const decodedEmail = "shop14@gmail.com";
+  //           const email ="shop14@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
   // sells 15
-  app.get('/totalSell15', async (req, res) => {
-            const decodedEmail = "shop15@gmail.com";
-            const email ="shop15@gmail.com"
-            if (email === decodedEmail) {
-                const query = { email: email };
-                const cursor = SheetDb.find(query);
-                const orders = await cursor.toArray();
-                res.send(orders);
-            }
-            else {
-                res.status(403).send({ message: 'forbiden  accespoitn' })
-            }
-        })
+  // app.get('/totalSell15', async (req, res) => {
+  //           const decodedEmail = "shop15@gmail.com";
+  //           const email ="shop15@gmail.com"
+  //           if (email === decodedEmail) {
+  //               const query = { email: email };
+  //               const cursor = SheetDb.find(query);
+  //               const orders = await cursor.toArray();
+  //               res.send(orders);
+  //           }
+  //           else {
+  //               res.status(403).send({ message: 'forbiden  accespoitn' })
+  //           }
+  //       })
 
   // delete the value
     app.delete('/items/:id', async (req, res) => {
