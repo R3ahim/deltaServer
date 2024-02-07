@@ -417,6 +417,23 @@ app.get('/attend1' ,async(req,res)=>{
   const orderses= await Attend1.find().toArray();
   res.send(orderses)
 }) 
+        app.put('/attend1/:id', async (req, res) => {
+  const id = req.params.id;
+  const updateData = req.body;
+  const filter = { _id: ObjectId(id) };
+  const option = { upsert: true };
+  const udatedDoc = {
+      $set: {
+          from: updateData.from,
+          to: updateData.to,
+          time: updateData.time,
+         
+
+      }
+  }
+  const result = await Attend1.updateOne(filter, udatedDoc, option)
+  res.send(result)
+})
 app.delete('/attend1/:id', async (req, res) => {
   const id = req.body.id;
 
